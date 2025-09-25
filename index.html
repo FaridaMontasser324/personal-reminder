@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonelReminder</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <audio id="alarmSound" src="./alarm-327234.mp3" preload="auto" loop></audio>
+    <div class="input">
+    <div class="field">
+    <label for="des" style="color: darkgreen;">📝 Description:</label>
+    <textarea name="Description" id="des"></textarea>
+    </div>
+    <div class="field"></div>
+    <label for="time" style="color: darkgreen;">⏰ alarm Time:</label>
+    <input type="time" name="time" id="time">
+    </div>
+    </div>
+    <button onclick="setAlarm()" id="btn">🔔SetAlarm</button>
+    <div id="AlarmsList">
+        <header>ALARM LIST</header>
+        <hr style="width: 160px;background-color: darkgreen;height: 1px;">
+         <br>
+    </div>
+    <div class="clock">
+        <span id="hours">00</span>
+        <span>:</span>
+        <span id="mins">00</span>
+        <span>:</span>
+        <span id="secs">00</span>
+    </div>
+    <div class="popUp" id="popUp">
+        <fieldset id="contentBG">
+             <legend id="bell">
+            <img src="./bell ring.png" alt="bell" style="width:50px;height:50px;">           
+            </legend>
+            <span id="title">REMINDER</span>
+            <hr id="line1">    
+        <span id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, id?</span>
+        <div id="footer">
+        <hr id="line2">
+      <button onclick="Close()" id="closeBtn">Dismiss</button>
+      </div>
+        </fieldset>
+    </div>
+    <script src="./logic.js"></script>
+</body>
+</html>
